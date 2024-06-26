@@ -37,6 +37,20 @@ async function bootstrap() {
     }),
   );
 
+  app.enableCors({
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+    credentials: true,
+    allowedHeaders: [
+      'Cookie',
+      'Origin',
+      'X-Requested-With',
+      'Content-Type',
+      'Accept',
+      'Authorization',
+    ],
+  });
+
   await app.listen(3000, '0.0.0.0');
 }
 bootstrap();
