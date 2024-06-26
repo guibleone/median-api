@@ -21,6 +21,18 @@ services:
       - DATABASE_URL=${DATABASE_URL}
     volumes:
       - .:/app
+    command: >
+      sh -c "npx prisma migrate deploy && npm run start:prod"
+
+  seed:
+    build: .
+    depends_on:
+      - postgres
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    volumes:
+      - .:/app
+    entrypoint: ["sh", "-c", "npx prisma migrate deploy && npx prisma db seed"]
 
 volumes:
   postgres:

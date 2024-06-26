@@ -7,7 +7,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
-    "prisma":"ts-node prisma/seed.ts",
+    "migrate": "prisma migrate dev --name migration",
+    "seed": "ts-node prisma/seed.ts",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
@@ -41,6 +42,7 @@
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.5.7",
     "@nestjs/cli": "^10.0.0",
     "@nestjs/schematics": "^10.0.0",
     "@nestjs/testing": "^10.0.0",
