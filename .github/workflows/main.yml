@@ -39,6 +39,11 @@ jobs:
           echo 'DATABASE_URL=postgresql://myuser:mypassword@postgres:5432/median-db?schema=public' >> .env
           echo 'POSTGRES_DB=median-db' >> .env
 
+      - name: Stop and remove existing containers
+        run: |
+          docker stop $(docker ps -a -q --filter ancestor=postgres:16.3 --format="{{.ID}}") || true
+          docker rm $(docker ps -a -q --filter ancestor=postgres:16.3 --format="{{.ID}}") || true
+
       - name: Installing dependencies
         run: npm ci
 
@@ -60,3 +65,7 @@ jobs:
           browser: chrome
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Tear down
+        if: always()
+        run: docker-compose down
