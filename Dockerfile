@@ -4,8 +4,6 @@
 ARG NODE_VERSION=21.7.3
 FROM node:${NODE_VERSION}-slim as base
 
-LABEL fly_launch_runtime="NestJS/Prisma"
-
 # NestJS/Prisma app lives here
 WORKDIR /app
 
@@ -27,6 +25,8 @@ RUN npm ci --include=dev
 # Generate Prisma Client
 COPY --link prisma .
 RUN npx prisma generate
+
+RUN npx prisma migrate deploy
 
 # Copy application code
 COPY --link . .
