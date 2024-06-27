@@ -56,7 +56,7 @@ Para utilizar a API, faça as requisições aos endpoints documentados no Swagge
 ## Scripts
 
 - `npm run start:dev`: Inicia a aplicação em modo de desenvolvimento.
-- `npm run start:prod`: Inicia a aplicação em modo de produção.
+- `npm run start`: Inicia a aplicação em modo de produção.
 - `npm run build`: Compila a aplicação.
 
 ## Contribuição
@@ -74,4 +74,3 @@ Este projeto está licenciado sob a licença MIT.
 ---
 
 Feito com ❤️ por [Guilherme Leone](https://github.com/guibleone)
-```
