@@ -1,72 +1,78 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+```markdown
+# Median API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-  <p align="center">Arogresse <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencolltive.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Median API é uma aplicação de backend para um site de artigos, construída utilizando NestJS e Prisma. A API fornece endpoints para a criação, leitura, atualização e exclusão de artigos. O projeto também utiliza Swagger para a documentação da API e está hospedado no Render.
 
-## Description
+## Tecnologias Utilizadas
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- **Node.js**: v21.7.3
+- **NestJS**: Framework para a construção da aplicação.
+- **Prisma**: ORM para o banco de dados PostgreSQL.
+- **PostgreSQL**: Banco de dados relacional.
+- **Docker**: Para containerização da aplicação.
+- **Swagger**: Para documentação da API.
+- **Render**: Plataforma de hospedagem para o deploy.
 
-## Installation
+## Instalação
 
-```bash
-$ npm install
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/seu-usuario/median-api.git
+   cd median-api
+   ```
+
+2. Copie o arquivo de exemplo `.env` e configure suas variáveis de ambiente:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+3. Suba os containers Docker:
+
+   ```bash
+   docker-compose up --build
+   ```
+
+4. Acesse a documentação da API no Swagger:
+
+   - [http://localhost:3000/api](http://localhost:3000/api)
+
+## Deploy
+
+A API está hospedada no Render. Você pode acessá-la no seguinte link:
+
+- [https://median-api.onrender.com/](https://median-api.onrender.com/)
+
+## Uso
+
+Para utilizar a API, faça as requisições aos endpoints documentados no Swagger. Abaixo estão alguns exemplos de endpoints disponíveis:
+
+- **GET /articles**: Retorna todos os artigos.
+- **POST /articles**: Cria um novo artigo.
+- **GET /articles/:id**: Retorna um artigo específico pelo ID.
+- **PUT /articles/:id**: Atualiza um artigo específico pelo ID.
+- **DELETE /articles/:id**: Exclui um artigo específico pelo ID.
+
+## Scripts
+
+- `npm run start:dev`: Inicia a aplicação em modo de desenvolvimento.
+- `npm run start:prod`: Inicia a aplicação em modo de produção.
+- `npm run build`: Compila a aplicação.
+
+## Contribuição
+
+1. Faça um fork do repositório.
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`).
+3. Commit suas alterações (`git commit -m 'Adiciona nova feature'`).
+4. Faça o push para a branch (`git push origin feature/nova-feature`).
+5. Abra um Pull Request.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT.
+
+---
+
+Feito com ❤️ por [Guilherme Leone](https://github.com/guibleone)
 ```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
