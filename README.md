@@ -1,4 +1,3 @@
-```markdown
 # Median API
 
 Median API é uma aplicação de backend para um site de artigos, construída utilizando NestJS e Prisma. A API fornece endpoints para a criação, leitura, atualização e exclusão de artigos. O projeto também utiliza Swagger para a documentação da API e está hospedado no Render.
