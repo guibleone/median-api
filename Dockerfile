@@ -34,7 +34,6 @@ COPY --link . .
 # Build application
 RUN npm run build
 
-
 # Final stage for app image
 FROM base
 
