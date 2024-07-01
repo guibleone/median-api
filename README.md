@@ -1,4 +1,3 @@
-```markdown
 # Median API
 
 Median API é uma aplicação de backend para um site de artigos, construída utilizando NestJS e Prisma. A API fornece endpoints para a criação, leitura, atualização e exclusão de artigos. O projeto também utiliza Swagger para a documentação da API e está hospedado no Render.
@@ -57,7 +56,7 @@ Para utilizar a API, faça as requisições aos endpoints documentados no Swagge
 ## Scripts
 
 - `npm run start:dev`: Inicia a aplicação em modo de desenvolvimento.
-- `npm run start:prod`: Inicia a aplicação em modo de produção.
+- `npm run start`: Inicia a aplicação em modo de produção.
 - `npm run build`: Compila a aplicação.
 
 ## Contribuição
@@ -75,4 +74,3 @@ Este projeto está licenciado sob a licença MIT.
 ---
 
 Feito com ❤️ por [Guilherme Leone](https://github.com/guibleone)
-```
