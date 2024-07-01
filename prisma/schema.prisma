@@ -5,14 +5,12 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider      = "prisma-client-js"
-  //binaryTargets = ["native", "linux-musl"]
+  provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://median_db_render_user:LlEAVe4lAb42JV4poDmbF0PJ3hWvksXT@dpg-cpunfvlds78s73e0ska0-a/median_db_render"
-  //env("DATABASE_URL")
+  url      = env("DATABASE_URL")
 }
 
 model Article {
