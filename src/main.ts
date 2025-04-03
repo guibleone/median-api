@@ -7,8 +7,6 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 
-
-// Ganhando yolo achivment
 import * as dotenv from 'dotenv';
 import { PrismaClientExceptionFilter } from 'nestjs-prisma';
 
